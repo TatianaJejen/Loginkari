@@ -1,0 +1,318 @@
+{% extends "users/base.html" %}
+{% block title %} Home Page {% endblock title%}
+{% block content %}
+    <div class="jumbotron" style="background: #0a1624">
+        <h1 class="display-4" style="color: #ffffff">Bienvenido a Kary, {{user.first_name.title|default:'Guest'}}</h1>
+        <p class="lead" style="color: #ffffff">
+            Este es un <b>ecosistema de soluciones Digitales</b> donde podras interactuar con tus clientes de una manera más ágil y segura.
+        </p>
+        <hr class="my-4">
+        <!-- <p class="lead">
+            {% if user.is_authenticated %}
+                <a class="btn btn-primary btn-lg" href="{% url 'logout' %}" role="button">Cerrar sesión</a>
+            {% else %}
+                <a class="btn btn-primary btn-lg" href="{% url 'login' %}" role="button">Sign in</a>
+            {% endif %}
+        </p> -->
+    </div>    
+        <div class="container-fluid">
+                  
+            <div class="row">
+              <div class="col-xl-3 col-sm-6">
+                <div class="card-body"   style="background-image: url('/static/images/title-img.png'), linear-gradient(to right top, #01abae, #01b7ba, #01c2c6, #01ced2, #01dade); padding: 10px; text-align: center; margin-bottom: 10px; color: #fff;">
+                  <h3 style="margin-top: 0; color: #fff"  >2023-04</h3 >
+                  <p>Mes Actual</p>
+                </div>
+              </div>
+              <div class="col-xl-3 col-sm-6">
+                <div class="card-body" style="background-image: url('/static/images/title-img.png'),linear-gradient(to right top, #01abae, #01b7ba, #01c2c6, #01ced2, #01dade); padding: 10px; text-align: center; margin-bottom: 10px; color: #fff;">
+                  <h3 style="margin-top: 0; color: #fff"  >39.969</h3 >
+                  <p>Total Créditos</p>
+                </div>
+              </div>
+              <div class="col-xl-3 col-sm-6">
+                <div class="card-body" style="background-image: url('/static/images/title-img.png'),linear-gradient(to right top, #01abae, #01b7ba, #01c2c6, #01ced2, #01dade); padding: 10px; text-align: center; margin-bottom: 10px; color: #fff;">
+                  <h3 style="margin-top: 0; color: #fff"  >36.432</h3 >
+                  <p>Total Clientes</p>
+                </div>
+              </div>
+              <div class="col-xl-3 col-sm-6">
+                <div class="container-fluid">
+                  <div class="card-body" style=" background-color: #fff; padding: 10px; text-align: center;">
+                    <div class="row" style="display: flex;">
+                      <div class="col" style="flex: 1;">
+                        <h3>18%</h3><p >ICV 30</p>
+                      </div>
+                      <div class="col" style="flex: 1;">
+                        <h3>11%</h3><p>ICV 60</p>
+                      </div>
+                      <div class="col" style="flex: 1;">
+                        <h3>9%</h3><p>ICV 90</p>
+                      </div>
+                    </div>  
+                  </div>    
+                </div>
+                
+              </div>
+            </div>
+      
+            <div class="row">
+              <div class="col-xl-6">
+                <div class="card">
+                  <div class="card-body" style="background-color: #FFFFFF;">
+                    <h3 class="card-title mb-4" style="text-align:center"> Estado Cartera (a hoy)</h3>
+                    <div class="table-responsive">
+                      <table class="table align-middle table-centered table-vertical table-nowrap">
+                        <thead style="text-align:center" class="table-light" style="border-bottom: 1px solid black">
+                          <tr>
+                            <th>Créditos Deteriorados</th>
+                            <th>Créditos Mejorados</th>
+                            <th>Créditos que Permanecen</th>
+                          </tr>
+                        </thead>
+                        <tbody style="text-align:center"> 
+                          <tr style="background-color:#fff; text-align:center,">
+                            <td style="border-right: 1px solid black; text-align:center">6.858</td>
+                          
+                            <td style="border-right: 1px solid black; text-align:center">1.378</td>
+                          
+                            <td style="text-align:center">31.733</td>
+                          
+                          </tr> 
+                          <tr style="background-color:#fff; text-align:center,">
+                            <td style="border-right: 1px solid black; text-align:center"></td>
+                          
+                            <td style="border-right: 1px solid black; text-align:center"></td>
+                          
+                            <td style="text-align:center"></td>
+                            
+                          </tr>
+                      </table>  
+                    </div>    
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-6" >
+                <div class="card">
+                  <div class="card-body" style="background-color: #FFFFFF;">
+                    <h3 class="card-title mb-4" style="text-align:center" >Estado Cartera (Proyección a Cierre)</h3>
+                    <div class="table-responsive">
+                      <table class="table align-middle table-centered table-vertical table-nowrap">
+                        <thead style="text-align:center" class="table-light" style="border-bottom: 1px solid black">
+                          <tr>
+                            <th class="text-align: center">Créditos Deteriorados</th>
+                            <th >Créditos Mejorados</th>
+                            <th>Créditos que Permanecen</th>
+                          </tr>
+                        </thead>
+                        <tbody> 
+                          <tr style="background-color:#fff; text-align:center,">
+                            <td style="border-right: 1px solid black; text-align:center">29.093</td>
+                          
+                            <td style="border-right: 1px solid black; text-align:center">5.422</td>
+                          
+                            <td style="text-align:center">5.454</td>
+                          
+                          </tr> 
+                          <tr style="background-color:#fff; text-align:center,">
+                            <td style="border-right: 1px solid black; text-align:center"></td>
+                          
+                            <td style="border-right: 1px solid black; text-align:center"></td>
+                          
+                            <td style="text-align:center"></td>
+                            
+                          </tr>
+                      </table>  
+                    </div>    
+                  </div>
+                </div>
+              </div>
+            </div> 
+            <div class="row">
+              <div class="col-xl-12">
+                <div class="card" style="color: #000; background-color: #FFFFFF;">
+                  <div class="card-body">
+                    <h3 class="card-title mb-4"></h3></div>
+                    <div class="table-responsive">
+                      <table class="table table-striped table-valign-middle" style="color: #000;">
+                        <thead style="text-align:center">
+                          <tr>
+                            <th>Mora</th>
+                            <th>Total Créditos</th>
+                            <th>Total Clientes</th>
+                            <th>Total Créditos Aliviados</th>
+                            <th>Total Créditos Deteriorados</th>
+                            <th>Total Créditos Permanecidos</th>
+                            <th>Total Valor Desembolso</th>
+                            <th>Total Valor Capital</th>
+                          </tr>
+                        </thead>
+                        <tbody style="text-align:center">
+                          <tr>
+                            <td>0-Actual</td>
+                            <td>18.683</td>
+                            <td>17.608</td>
+                            <td>2341</td>
+                            <td>0</td>
+                            <td>17557</td>
+                            <td>1.126.016.853.096</td>
+                            <td>885428264525</td>
+                          </tr>
+                          <tr>
+                            <td>1-30</td>
+                            <td>11450</td>
+                            <td>10671</td>
+                            <td>2979</td>
+                            <td>4808</td>
+                            <td>6441</td>
+                            <td>675351563015</td>
+                            <td>522148791941</td>
+                          </tr>
+                          <tr>
+                            <td>31-60</td>
+                            <td>2746</td>
+                            <td>2648</td>
+                            <td>955</td>
+                            <td>1428</td>
+                            <td>1276</td>
+                            <td>161176502190</td>
+                            <td>124205324018</td>
+                          </tr>
+                          <tr>
+                            <td>61-90</td>
+                            <td>868</td>
+                            <td>843</td>
+                            <td>334</td>
+                            <td>400</td>
+                            <td>461</td>
+                            <td>39086388859</td>
+                            <td>27467718979</td>
+                          </tr>
+                          <tr>
+                            <td>91-180</td>
+                            <td>882</td>
+                            <td>856</td>
+                            <td>351</td>
+                            <td>142</td>
+                            <td>738</td>
+                            <td>36384512275</td>
+                            <td>25844164901</td>
+                          </tr>
+                          <tr>
+                            <td>181-360</td>
+                            <td>857</td>
+                            <td>808</td>
+                            <td>360</td>
+                            <td>54</td>
+                            <td>803</td>
+                            <td>33689274127</td>
+                            <td>22950025201</td>
+                          </tr>
+                          <tr>
+                            <td>360+</td>
+                            <td>4483</td>
+                            <td>4247</td>
+                            <td>727</td>
+                            <td>26</td>
+                            <td>4457</td>
+                            <td>159913696291</td>
+                            <td>107573264893</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+            <div class="row">
+              <div class="col-xl-4 col-lg-6">
+                <div class="card" style="color: #000; background-color: #FFFFFF;">
+                  <div class="card-body" >
+                    <h4 class="card-title mb-3" style="text-align:center">Rango Mora 31-60</h4>
+                    <div class="table-responsive">
+                      <table class="table table-striped table-valign-middle" style="color: #000;">
+                        <thead style="text-align:center">
+                          <tr>
+                            <th>Total Valor Capital Actual</th>
+                            <th>Total Valor Capital Proyectado </th>
+                          </tr>  
+                        </thead>  
+                        <tbody style="text-align:center">
+                          <tr>
+                            <td>124205324018</td>
+                            <td>124205324018</td>
+                          </tr>
+                        </tbody>
+                      </table>  
+                    </div>
+                  </div>
+                </div>
+              </div>  
+              <div class="col-xl-4 col-lg-6">
+                <div class="card" style="color: #000; background-color: #FFFFFF;">
+                  <div class="card-body" >
+                    <h4 class="card-title mb-3" style="text-align:center">Rango Mora 61-90</h4>
+                    <div class="table-responsive">
+                      <table class="table table-striped table-valign-middle" style="color: #000;">
+                        <thead style="text-align:center">
+                          <tr>
+                            <th>Total Valor Capital Actual</th>
+                            <th>Total Valor Capital Proyectado </th>
+                          </tr>  
+                        </thead>  
+                        <tbody style="text-align:center">
+                          <tr>
+                            <td>27467718979</td>
+                            <td>27467718979</td>
+                          </tr>
+                        </tbody>
+                      </table>  
+                    </div>
+                  </div>
+                </div>
+              </div> 
+              <div class="col-xl-4 ">
+                <div class="card" style="color: #000; background-color: #FFFFFF;">
+                  <div class="card-body" >
+                    <h4 class="card-title mb-3" style="text-align:center">Rango Mora 91-180</h4>
+                    <div class="table-responsive">
+                      <table class="table table-striped table-valign-middle" style="color: #000;">
+                        <thead style="text-align:center">
+                          <tr>
+                            <th>Total Valor Capital Actual</th>
+                            <th>Total Valor Capital Proyectado </th>
+                          </tr>  
+                        </thead>  
+                        <tbody style="text-align:center">
+                          <tr>
+                            <td>124205324018</td>
+                            <td>124205324018</td>
+                          </tr>
+                        </tbody>
+                      </table>  
+                    </div>
+                  </div>
+                </div>
+              </div> 
+            </div> 
+                   
+            <div class="row">
+                <div class="col-xl-6 col-lg-6">>
+                    <canvas id="myChart" style="height: 300px;"></canvas>
+                </div>
+                <div class="col-xl-6 col-lg-6">
+                    <canvas id="grafico-torta" style="height: 300px;"></canvas>
+                </div>
+            </div> 
+            
+        </div>
+    </div>
+</div>
+</div>
+
+
+    </div>
+
+{% endblock content %}

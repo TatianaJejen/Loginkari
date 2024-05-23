@@ -1,0 +1,75 @@
+{% extends "users/base.html" %}
+{% block title %} Login Page {% endblock title%}
+{% block content %}
+    <div class="form-content my-3 p-3">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-5">
+                    <div class="card shadow-lg border-0 rounded-lg mt-0 mb-3"style="background: #0a1624; width: 400px; border-radius: 30px; box-shadow: 0px 5px 10px rgba(232, 239, 253, 0.144)">
+                        <div class="card-header justify-content-center">
+                          <h3 class="font-weight-light my-1 text-center" style="color: #ffffff">Ingresa!</h3>
+                        </div>
+                        {% if form.errors %}
+                            <div class="alert alert-danger alert-dismissible" role="alert">
+                                <div id="form_errors">
+                                    {% for key, value in form.errors.items %}
+                                        <strong>{{ value }}</strong>
+                                    {% endfor %}
+                                </div>
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                        {% endif %}
+                        <div class="card-body">
+                            <form method="POST">
+                                {% csrf_token %}
+                                <div class="form-row">
+                                    <div class="col-md-10 offset-md-1">
+                                        <div class="form-group">
+                                            <hr>
+                                            <!-- <p class="text-center"><strong>OR</strong></p> -->
+                                            <hr>
+                                            <label class="small mb-1" style="color: #ffffff">Usuario</label>
+                                            {{ form.username }}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-md-10 offset-md-1">
+                                        <div class="form-group">
+                                          <label class="small mb-1" style="color: #ffffff">Contraseña</label>
+                                          {{ form.password }}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-md-10 offset-md-1">
+                                        <div class="form-group">
+                                            <!-- Add a Remember me functionality -->
+                                            {{ form.remember_me }}
+                                            <label style="color: #ffffff">Recordar</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-md-10 offset-md-1">
+                                        <div class="form-group mt-0 mb-1">
+                                          <button name="login" class="col-md-12 btn btn-dark" id="login">Inicio de sesion</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="card-footer text-center">
+                            <div class="small">
+                                <a href="{% url 'users-register' %}">Don't have an account yet? Go to signup</a><br>
+                                <a href="{% url 'password_reset' %}"><i>Forgot Password?</i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+{% endblock content %}
